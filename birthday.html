@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, My Treasure 💜</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="birthday.css">
+</head>
+<body>
+
+<canvas id="confetti-canvas"></canvas>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <div class="badge">✨ Today Is All About You ✨</div>
+
+  <h1 class="hero-title">Happy Birthday!</h1>
+  <p class="hero-sub">To my forever person</p>
+  <p class="hero-names">My Baby &nbsp;•&nbsp;My Treasure 🥹❤️ &nbsp;•&nbsp;Babe</p>
+
+  <div class="scroll-hint" onclick="document.querySelector('.love-note-section').scrollIntoView({behavior:'smooth'})">
+    <span>Scroll for all the love</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="6 9 12 15 18 9"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== LOVE NOTE ===== -->
+<section class="love-note-section">
+  <div class="section-inner">
+    <h2 class="section-label reveal">A Note From My Heart 💌</h2>
+    <div class="love-note-card reveal">
+      <p>
+        HAPPY 18th BIRTHDAY MY CHRISTINA 😉 <br>
+        Today the whole world should know just how special you are. From the way you laugh
+        to the way you light up every single room. Babe you are genuinely my favourite part of every single day.
+      </p>
+      <p>
+        You deserve every good thing life has to offer, and today I just want you to feel
+        how deeply, completely, and ridiculously in love I am with you.
+      </p>
+      <p>
+        No words are big enough, no cake is sweet enough and no birthday page is fancy enough
+        but this is an attempt to show you just but a fraction of what you mean to me. <br>
+        Kamata kiss my sexy gangster.💋
+      </p>
+      <p class="love-note-sig">— Yours always, Sam❤️</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PHOTO GALLERY ===== -->
+<section class="gallery-section">
+  <div class="section-inner">
+    <h2 class="section-label reveal">📸 Us, In Pictures</h2>
+    <p style="text-align:center;color:#c084fc;margin-bottom:2rem;font-size:0.9rem;" class="reveal">
+      Click a photo to enlarge it
+    </p>
+
+    <div class="gallery-grid" id="galleryGrid">
+
+      <div class="photo-card reveal" data-src="photos/photo1.jpg">
+        <img src="photos/fav-smile.JPG" alt="Photo 1">
+        <div class="photo-placeholder-label">📷 photo1.jpg</div>
+        <div class="caption-overlay">My favourite smile 🥹</div>
+      </div>
+
+      <div class="photo-card reveal" data-src="photos/photo2.jpg">
+        <img src="photos/pure-sunshine.JPG" alt="Photo 2">
+        <div class="photo-placeholder-label">📷 photo2.jpg</div>
+        <div class="caption-overlay">Pure sunshine ☀️</div>
+      </div>
+
+      <div class="photo-card reveal" data-src="photos/photo3.jpg">
+        <img src="photos/perfect.jpg" alt="Photo 3">
+        <div class="photo-placeholder-label">📷 photo3.jpg</div>
+        <div class="caption-overlay">This day was perfect ✨</div>
+      </div>
+
+      <div class="photo-card reveal" data-src="photos/photo4.jpg">
+        <img src="photos/always-you.JPG" alt="Photo 4">
+        <div class="photo-placeholder-label">📷 photo4.jpg</div>
+        <div class="caption-overlay">Gorgeous inside &amp; out 🌸</div>
+      </div>
+
+      <div class="photo-card reveal" data-src="photos/photo5.jpg">
+        <img src="photos/gorgeous.JPG" alt="Photo 5">
+        <div class="photo-placeholder-label">📷 photo5.jpg</div>
+        <div class="caption-overlay">My biggest blessing ❤️ </div>
+      </div>
+
+      <div class="photo-card reveal" data-src="photos/photo6.jpg">
+        <img src="photos/best-memory-ever.jpg" alt="Photo 6">
+        <div class="photo-placeholder-label">📷 photo6.jpg</div>
+        <div class="caption-overlay">Best memory ever 😝</div>
+      </div>
+
+      <div class="photo-card reveal" data-src="photos/photo7.jpg">
+        <img src="photos/treasure.JPG" alt="Photo 7">
+        <div class="photo-placeholder-label">📷 photo7.jpg</div>
+        <div class="caption-overlay">I treasure this 🥹</div>
+      </div>
+
+      <div class="photo-card reveal" data-src="photos/photo8.jpg">
+        <img src="photos/MWW.JPG" alt="Photo 8">
+        <div class="photo-placeholder-label">📷 photo8.jpg</div>
+        <div class="caption-overlay">My whole world 🌍</div>
+      </div>
+
+      <div class="photo-card reveal" data-src="photos/photo9.jpg">
+        <img src="photos/us-forever.JPG" alt="Photo 9">
+        <div class="photo-placeholder-label">📷 photo9.jpg</div>
+        <div class="caption-overlay">Us forever ❤️</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== VIDEOS ===== -->
+<section class="videos-section">
+  <div class="section-inner">
+    <h2 class="section-label reveal">🎬 Our Favourite Moments</h2>
+    <div class="videos-grid">
+
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video src="videos/first.mov" controls onerror="this.parentElement.classList.add('placeholder-mode')">
+            Your browser doesn't support video.
+          </video>
+          <div class="video-placeholder-label">🎬 video1.mp4</div>
+        </div>
+        <div class="video-info">
+          <p class="video-title">Our First Adventure 🗺️</p>
+          <p class="video-caption">Every moment with you is a gift</p>
+        </div>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video src="videos/silly-and-wonderful.mov" controls onerror="this.parentElement.classList.add('placeholder-mode')">
+            Your browser doesn't support video.
+          </video>
+          <div class="video-placeholder-label">🎬 video2.mp4</div>
+        </div>
+        <div class="video-info">
+          <p class="video-title">Silly &amp; Wonderful 😄💜</p>
+          <p class="video-caption">You literally are the best</p>
+        </div>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video src="videos/fav-video.MOV" controls onerror="this.parentElement.classList.add('placeholder-mode')">
+            Your browser doesn't support video.
+          </video>
+          <div class="video-placeholder-label">🎬 video3.mp4</div>
+        </div>
+        <div class="video-info">
+          <p class="video-title">My Favourite Video of You 🌟</p>
+          <p class="video-caption">I could watch this forever</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== REASONS ===== -->
+<section class="reasons-section">
+  <div class="section-inner">
+    <h2 class="section-label reveal">Why I Love You <span class="sparkle">✨</span></h2>
+    <div class="reasons-grid" id="reasonsGrid">
+      <!-- JS fills these -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINALE ===== -->
+<section class="finale-section">
+  <h2 class="finale-title reveal">Make A Wish, Babe! 🎂</h2>
+  <p class="finale-sub reveal">
+    May this birthday be the beginning of the most beautiful chapter yet.
+    I love you more than yesterday, and less than tomorrow. <br>
+    Happy 18th Birthday my gorgeous babyy❤️ <br>
+    I LOVE YOU ALWAYS AND FOREVER
+  </p>
+  <button class="confetti-btn reveal" onclick="launchConfetti()">
+    🎉 Pop the Confetti!
+  </button>
+</section>
+
+<footer>
+  I LOVE LOVE YOU MY BABYYY❤️
+</footer>
+
+<script>
+/* ============================================================
+   FLOATING HEARTS
+============================================================ */
+const heartsContainer = document.getElementById('floatingHearts');
+const heartEmojis = ['💜','❤️','💗','💝','✨','🌸','💫','⭐'];
+
+function spawnHeart() {
+  const el = document.createElement('span');
+  el.classList.add('heart');
+  el.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+  el.style.left = Math.random() * 100 + 'vw';
+  el.style.fontSize = (Math.random() * 1.2 + 0.7) + 'rem';
+  const dur = Math.random() * 10 + 8;
+  el.style.animationDuration = dur + 's';
+  el.style.animationDelay = Math.random() * -dur + 's';
+  heartsContainer.appendChild(el);
+  setTimeout(() => el.remove(), (dur + 2) * 1000);
+}
+
+for (let i = 0; i < 25; i++) spawnHeart();
+setInterval(spawnHeart, 700);
+
+/* ============================================================
+   PHOTO CARDS — placeholder + lightbox
+============================================================ */
+document.querySelectorAll('.photo-card').forEach(card => {
+  const img = card.querySelector('img');
+  const src = card.dataset.src;
+
+  const markPlaceholder = () => card.classList.add('placeholder-mode');
+
+  // Catch errors that fire before or after listener attaches
+  img.addEventListener('error', markPlaceholder);
+  if (img.complete && img.naturalWidth === 0) markPlaceholder();
+
+  card.addEventListener('click', () => {
+    if (!card.classList.contains('placeholder-mode')) {
+      openLightbox(img.src);
+    }
+  });
+});
+
+/* ============================================================
+   VIDEOS — placeholder if file missing
+============================================================ */
+document.querySelectorAll('.video-wrapper video').forEach(vid => {
+  vid.addEventListener('error', () => vid.closest('.video-wrapper').classList.add('placeholder-mode'));
+});
+
+/* ============================================================
+   REASONS I LOVE YOU
+============================================================ */
+const reasons = [
+  { emoji: '🤣', text: 'You have the best laugh in the whole world' },
+  { emoji: '🌟', text: 'You make everyone around you feel seen and loved' },
+  { emoji: '😉', text: 'you carry the most gorgeous eyes ever😝' },
+  { emoji: '🥹', text: 'Even the simple moments with you feel magical' },
+  { emoji: '❤️', text: 'You love deeply and completely' },
+  { emoji: '🌙', text: 'You\'re the last thing I want to think about every night' },
+  { emoji: '✨', text: 'The way your face lights up when you\'re excited (when you see me🙄)'},
+  { emoji: '🌸', text: 'Your big heart and kindness makes the world genuinely better' },
+];
+
+const reasonsGrid = document.getElementById('reasonsGrid');
+reasons.forEach(r => {
+  const card = document.createElement('div');
+  card.className = 'reason-card reveal';
+  card.innerHTML = `<div class="reason-emoji">${r.emoji}</div><p>${r.text}</p>`;
+  reasonsGrid.appendChild(card);
+});
+
+/* ============================================================
+   LIGHTBOX
+============================================================ */
+function openLightbox(src) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+
+/* ============================================================
+   CONFETTI
+============================================================ */
+const canvas = document.getElementById('confetti-canvas');
+const ctx = canvas.getContext('2d');
+let pieces = [];
+let animating = false;
+
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+const confettiColors = [
+  '#c084fc','#a855f7','#7c3aed','#f472b6','#fbbf24',
+  '#e879f9','#818cf8','#f9a8d4','#ffffff'
+];
+
+function launchConfetti() {
+  pieces = [];
+  for (let i = 0; i < 220; i++) {
+    pieces.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height - canvas.height,
+      size: Math.random() * 10 + 5,
+      color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
+      vx: (Math.random() - 0.5) * 5,
+      vy: Math.random() * 4 + 2,
+      rotation: Math.random() * 360,
+      rotSpeed: (Math.random() - 0.5) * 8,
+      shape: Math.random() > 0.5 ? 'rect' : 'circle',
+      opacity: 1
+    });
+  }
+  if (!animating) { animating = true; animateConfetti(); }
+}
+
+function animateConfetti() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  pieces.forEach(p => {
+    ctx.save();
+    ctx.globalAlpha = p.opacity;
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.rotation * Math.PI / 180);
+    ctx.fillStyle = p.color;
+    if (p.shape === 'rect') {
+      ctx.fillRect(-p.size/2, -p.size/4, p.size, p.size/2);
+    } else {
+      ctx.beginPath();
+      ctx.arc(0, 0, p.size/2, 0, Math.PI*2);
+      ctx.fill();
+    }
+    ctx.restore();
+    p.x += p.vx;
+    p.y += p.vy;
+    p.rotation += p.rotSpeed;
+    p.vy += 0.08;
+    if (p.y > canvas.height + 20) p.opacity -= 0.02;
+  });
+  pieces = pieces.filter(p => p.opacity > 0);
+  if (pieces.length > 0) requestAnimationFrame(animateConfetti);
+  else animating = false;
+}
+
+// Auto-launch on load
+window.addEventListener('load', () => setTimeout(launchConfetti, 800));
+
+/* ============================================================
+   SCROLL REVEAL
+============================================================ */
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
